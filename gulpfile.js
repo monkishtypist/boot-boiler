@@ -9,8 +9,8 @@ var paths = {
         dest: './dist/fonts/'
     },
     images: {
-        src: './src/img/**/*.{fpx,gif,jpg,jpeg,jif,jfif,jp2,jpx,j2k,j2c,pcd,pdf,png,tif,tiff}',
-        dest: './dist/img/'
+        src: './src/images/**/*.{fpx,gif,jpg,jpeg,jif,jfif,jp2,jpx,j2k,j2c,pcd,pdf,png,tif,tiff}',
+        dest: './dist/images/'
     },
     scripts: {
         src: './src/js/**/*.js',
@@ -36,7 +36,7 @@ var sass = require('gulp-sass');
 var uglify = require('gulp-uglify');
 
 function assets() {
-    return gulp.src(['src/**/*', '!src/fonts', '!src/fonts/**', '!src/img', '!src/img/**', '!src/js', '!src/js/**', '!src/sass', '!src/sass/**'])
+    return gulp.src(['src/**/*', '!src/fonts', '!src/fonts/**', '!src/images', '!src/images/**', '!src/js', '!src/js/**', '!src/sass', '!src/sass/**'])
         .pipe(gulp.dest(paths.dist));
 }
 

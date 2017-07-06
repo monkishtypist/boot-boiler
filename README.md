@@ -1,17 +1,21 @@
 Bootstrap Gulp 4 Boilerplate
 ============================
 
-A boilerplate Bootstrap project, featuring Gulp 4 and NPM package management.
+A boilerplate Bootstrap project, featuring Gulp 4, SASS, and NPM package management.
 
 ## Quick Start ##
 
 - Requires Gulp 4 and NPM
 - Download from GitHub and install by running `npm install`
-- Static assets are stored in `src/img/` and `src/fonts`
-- Add custom SASS to `src/_custom.scss`
+- Put your static assets in `src/images/` and `src/fonts`
+- All styles are handled via SASS in `src/sass/`
+-- Add custom styles to `src/sass/_custom.scss`
+-- You can edit Bootstrap variables in `src/sass/_variables.scss`
+-- Use `src/sass/app.scss` to import new SASS files, fonts, etc.
 - Add custom JavaScript to `src/js/custom.js`
-- Assets are combined and minified and stored in `dist/` for deployment
-- To build assets for production run `gulp build`
+- Assets are combined and minified and moved to `dist/` for deployment
+- To start development run `gulp watch`
+- To move static assets for production run `gulp build`
 
 ## License ##
 

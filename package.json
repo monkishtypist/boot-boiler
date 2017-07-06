@@ -1,0 +1,45 @@
+{
+  "name": "bootstrap-g4-sass-boilerplate",
+  "version": "0.1.0",
+  "description": "A Bootstrap boilerplate with Gulp 4, FontAwesome, SASS.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "live-server public/",
+    "postinstall": "gulp init"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/monkishtypist/bootstrap-boiler.git"
+  },
+  "keywords": [
+    "framework",
+    "bootstrap",
+    "boilerplate"
+  ],
+  "author": "Tim Spinks <tim@monkishtypist.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/monkishtypist/bootstrap-boiler/issues"
+  },
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "browser-sync": "^2.18.12",
+    "del": "^3.0.0",
+    "font-awesome": "^4.7.0",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-add-src": "^0.2.0",
+    "gulp-babel": "^6.1.2",
+    "gulp-clean-css": "^3.5.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-notify": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.2.0",
+    "gulp-uglify": "^1.5.3",
+    "gulp-watch": "^4.3.11",
+    "jquery": "^2.2.1",
+    "live-server": "^0.9.2"
+  }
+}

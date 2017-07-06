@@ -17,7 +17,7 @@ var paths = {
         dest: './dist/js/'
     },
     styles: {
-        src: './src/sass/',
+        src: './src/sass/**/*.scss',
         dest: './dist/css/'
     }
 };
@@ -34,7 +34,6 @@ var plumber = require('gulp-plumber');
 var rename = require('gulp-rename');
 var sass = require('gulp-sass');
 var uglify = require('gulp-uglify');
-var watch = require('gulp-watch');
 
 function assets() {
     return gulp.src(['src/**/*', '!src/fonts', '!src/fonts/**', '!src/img', '!src/img/**', '!src/js', '!src/js/**', '!src/sass', '!src/sass/**'])
@@ -75,7 +74,7 @@ function scripts() {
 };
 
 function styles() {
-    return gulp.src(paths.styles.src + 'app.scss')
+    return gulp.src(paths.src + 'sass/app.scss')
         .pipe(plumber())
         .pipe(sass().on('error', sass.logError))
         .pipe(cleanCSS({
@@ -89,7 +88,7 @@ function styles() {
 };
 
 function watch() {
-    gulp.watch(paths.sass.src + '**/*.scss', sass);
+    gulp.watch(paths.styles.src, styles);
     gulp.watch(paths.scripts.src, scripts);
 };
 

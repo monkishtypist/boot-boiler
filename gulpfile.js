@@ -90,6 +90,7 @@ function styles() {
 function watch() {
     gulp.watch(paths.styles.src, styles);
     gulp.watch(paths.scripts.src, scripts);
+    gulp.watch(['src/**/*', '!src/fonts', '!src/fonts/**', '!src/images', '!src/images/**', '!src/js', '!src/js/**', '!src/sass', '!src/sass/**'], assets);
 };
 
 exports.assets = assets;
@@ -100,8 +101,8 @@ exports.scripts = scripts;
 exports.styles = styles;
 exports.watch = watch;
 
-var init = gulp.parallel(assets, fonts, images);
-var build = gulp.series(clean, gulp.parallel(assets, fonts, images, scripts, styles));
+var init = gulp.series(clean, gulp.parallel(assets, fonts, scripts, styles));
+var build = gulp.parallel(assets, fonts, images, scripts, styles);
 
 gulp.task('init', init);
 gulp.task('build', build);
